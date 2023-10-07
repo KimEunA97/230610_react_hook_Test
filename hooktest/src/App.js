@@ -4,6 +4,7 @@ import UseEffectVisible from './useEffect/UseEffectVisible';
 import UseReducerCounter from './useReducer/UseReducerCounter';
 import UseReducerInfo from './useReducer/UseReducerInfo';
 import Average from './useMemo/Average';
+import UseMemoComp from './useMemo/UseMemoComp';
 
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
   return (
 
     <div>
-      <Average/>
+      <UseMemoComp/>
     </div>
 
   )
