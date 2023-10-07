@@ -27,3 +27,5 @@ const UseReducerCounter = () => {
 }
 
 export default UseReducerCounter;
+
+//useReducer를 사용했을 때 가장 큰 장점은 컴포넌트 업데이트 로직을 컴포넌트 바깥으로 뺄 수 있다는 것.
