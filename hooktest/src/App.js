@@ -6,17 +6,14 @@ import UseReducerInfo from './useReducer/UseReducerInfo';
 import Average from './useMemo/Average';
 import UseMemoComp from './useMemo/UseMemoComp';
 import UseCallbackAverage from './useCallback/UseCallbackAverage';
+import UseRefComp from './useRef/UseRefComp';
 
 
 export default function App() {
 
   return (
-
     <div>
-      <UseCallbackAverage/>
+      <UseRefComp/>
     </div>
-
   )
-
-
 }
