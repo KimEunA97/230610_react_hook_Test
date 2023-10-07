@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import MyMapComponent from './map';
+import UseStateComp from './useState/useStateComp';
 
 
 export default function App() {
@@ -7,10 +7,10 @@ export default function App() {
   return (
 
     <div>
-      <MyMapComponent></MyMapComponent>
+      <UseStateComp />
     </div>
 
   )
 
-  
+
 }
