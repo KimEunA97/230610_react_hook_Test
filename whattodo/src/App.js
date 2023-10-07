@@ -30,7 +30,9 @@ const App = () => {
         id: nextID.current,
         text,
         checked: false,
-      }
+      };
+      setTodos(todos.concat(todo));
+      nextID.current += 1;
     }, [todos],
   )
 
