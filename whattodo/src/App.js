@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import TodoTemplate from "./components/TodoTemplate";
 import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
@@ -23,9 +23,20 @@ const App = () => {
     }
   ])
 
+  const nextID = useRef(4);
+  const onInsert = useCallback(
+    text => {
+      const todo = {
+        id: nextID.current,
+        text,
+        checked: false,
+      }
+    }, [todos],
+  )
+
   return (
     <TodoTemplate>
-      <TodoInsert />
+      <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} />
     </TodoTemplate>
   )
