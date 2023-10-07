@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import UseStateComp from './useState/useStateComp';
-import Info from './useState/Info';
+import UseEffectComponents from './useEffect/UseEffectComponents';
 
 
 export default function App() {
@@ -8,7 +7,7 @@ export default function App() {
   return (
 
     <div>
-      <Info/>
+      <UseEffectComponents />
     </div>
 
   )
