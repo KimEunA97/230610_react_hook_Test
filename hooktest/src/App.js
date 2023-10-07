@@ -9,14 +9,14 @@ import UseCallbackAverage from './useCallback/UseCallbackAverage';
 import UseRefComp from './useRef/UseRefComp';
 import RefSample from './useRef/UseRefExample2';
 import MyComponent from './useRef/UseRefExample';
+import CustomInfo from './customHooks/customInfo';
 
 
 export default function App() {
 
   return (
     <div>
-      <MyComponent/>
-      <RefSample/>
+      <CustomInfo/>
     </div>
   )
 }

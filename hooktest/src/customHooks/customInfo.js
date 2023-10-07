@@ -11,15 +11,15 @@ const CustomInfo = () => {
   return (
     <div>
       <div>
-        <input value={name} onChange={onChange}></input>
-        <input value={nickname} onChange={onChange}></input>
+        <input name="name" value={name} onChange={onChange}></input>
+        <input name="nickname" value={nickname} onChange={onChange}></input>
       </div>
       <div>
         <div>
-          <b>이름</b> {name}
+          <b>이름 :</b> {name}
         </div>
         <div>
-          <b>닉네임</b> {nickname}
+          <b>닉네임 :</b> {nickname}
         </div>
       </div>
     </div>

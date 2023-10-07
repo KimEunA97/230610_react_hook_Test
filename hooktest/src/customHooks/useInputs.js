@@ -7,8 +7,8 @@ function reducer(state, action) {
   }
 }
 
-export default function useInputs(initialFrom){
-  const [state, dispatch] = useReducer(reducer, initialFrom);
+export default function useInputs(initialForm){
+  const [state, dispatch] = useReducer(reducer, initialForm);
   const onChange = e=> {
     dispatch(e.target);
   };
