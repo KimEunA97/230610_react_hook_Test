@@ -12,12 +12,12 @@ const App = () => {
       checked: true,
     },
     {
-      id: 1,
+      id: 2,
       text: '컴포넌트 스타일링 해보기',
       checked: true,
     },
     {
-      id: 1,
+      id: 3,
       text: '일정 관리 앱 만들어 보기',
       checked: false,
     }
@@ -36,10 +36,16 @@ const App = () => {
     }, [todos],
   )
 
+  const onRemove= useCallback((id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  },
+  [todos],
+  );
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onRemove={onRemove}/>
     </TodoTemplate>
   )
 }
