@@ -36,17 +36,26 @@ const App = () => {
     }, [todos],
   )
 
-  const onRemove= useCallback((id) => {
+  const onRemove = useCallback((id) => {
     //결과를 리턴하는 것이니 filter 내부 로직은 false를 리턴하는 것.
     setTodos(todos.filter(todo => todo.id !== id));
   },
-  [todos],
+    [todos],
   );
+
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo => todo.id === id ? { ...todo, checked: !todo.checked } : todo,)
+      )
+    },
+    [todos],
+  )
 
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onRemove={onRemove}/>
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   )
 }
