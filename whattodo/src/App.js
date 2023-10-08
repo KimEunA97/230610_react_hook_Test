@@ -37,6 +37,7 @@ const App = () => {
   )
 
   const onRemove= useCallback((id) => {
+    //결과를 리턴하는 것이니 filter 내부 로직은 false를 리턴하는 것.
     setTodos(todos.filter(todo => todo.id !== id));
   },
   [todos],
